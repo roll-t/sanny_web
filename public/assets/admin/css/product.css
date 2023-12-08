@@ -1,0 +1,213 @@
+.wrap-form{
+    text-transform:capitalize;
+    padding-left:5%;
+    padding-top:15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.view-try{
+  position: relative;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.212);
+}
+.btn-view{
+  position: absolute;
+  bottom:0;
+  right: 0;
+  background: var(--theme-1-2);
+  color:var(--text-color-1-4);
+  padding:10px 20px;
+  cursor: pointer;
+}
+.btn-view:active{
+  opacity: .6;
+}
+.view-try .list-product{
+  display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.169);
+}
+.view-try .list-product .product-item{
+  max-width: 300px;
+}
+.product-form{
+    display: flex;
+    flex-direction: column;
+}
+.group-input{
+    display: flex;
+    flex-direction: column;
+    padding-top:10px;
+}
+.group-input.img{
+    margin-top: 20px;
+}
+.group-input.img input{
+    margin-top: 5px ;
+}
+.group-input input, .group-input select{
+  max-width: 300px;
+  margin-top: 10px;
+}
+.group-input.text input{
+  padding-left:15px;
+}
+.group-input.btn input{
+    cursor: pointer;
+    font-size: var(--text-size-1-2);
+    text-transform: uppercase;
+    border:none;
+    border-radius: 5px;
+    background: var(--theme-1-2);
+    color:var(--text-color-1-4);
+}
+.group-input.btn input:hover{
+    opacity: .9;
+}
+.group-input.btn input:active{
+    opacity: .6;
+}
+    /* CSS cho phần select tùy chỉnh */
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+.group-input input{
+    height:35px;
+}
+.custom-select select {
+  display: none; /* Ẩn thẻ <select> gốc */
+}
+
+.select-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.custom-select:after {
+  content: '\25BC'; /* Mũi tên xuống */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+/* Tùy chỉnh giao diện khi người dùng click vào dropdown */
+.custom-select select:focus + .select-input {
+  border-color: #4CAF50;
+}
+
+/* Hiển thị tùy chọn khi click vào dropdown */
+.custom-select select:focus {
+  outline: none;
+}
+
+/* Đổi màu nền khi hover vào tùy chọn */
+.custom-select select option:hover {
+  background-color: #f1f1f1;
+}
+.body-list-product .headline-list-product{
+  align-items: center;
+  text-transform:capitalize;
+  display: flex;
+  justify-content: space-between;
+}
+.body-list-product .headline-list-product .right{
+  display: flex;
+  gap:5%;
+  flex:1;
+}
+.body-list-product .headline-list-product .right form{
+  flex:1;
+}
+.body-list-product .headline-list-product .right .group-input{
+  justify-content: end;
+  flex-direction: row;
+  align-items: center;
+}
+.body-list-product .headline-list-product .right .group-input:nth-child(1){
+  flex:1;
+}
+.body-list-product .headline-list-product .right .group-input:nth-child(2){
+  flex:1;
+}
+.body-list-product .headline-list-product .right .group-input input:nth-child(2){
+  cursor: pointer;
+}
+.body-list-product .headline-list-product .right .group-input input:nth-child(1){
+  padding-left:10px;
+  flex: 1;
+}
+.body-list-product .headline-list-product .left{
+  flex:1;
+}
+.body-list-product .headline-list-product  .group-input input{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.body-list-product .headline-list-product  .group-input select{
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.body-list-product .headline-list-product  .group-input{
+  padding-top:0;  
+}
+.list-product{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  margin-top: 40px;
+}
+.list-product .product-items{
+  padding-block:10px;
+  color:var(--text-color-1-4);
+  display: flex;
+  justify-content: space-between;
+  padding-inline:2%;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--theme-1-1);
+}
+.list-product .product-items .left {
+  flex:1;
+  display: flex;
+  align-items: center;
+  gap:5%;
+}
+.list-product .product-items .left .img-product{
+  max-width: 50px;
+}
+
+.paging {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+  max-width: 50%;
+  margin:0 auto;
+  margin-top: 30px;
+}
+.paging .paging-items{
+  opacity: .7;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  flex-basis: 1;
+  background: var(--theme-1-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:var(--text-color-1-4);
+}
+.paging .paging-items:hover{
+  opacity: 1;
+}
+.paging .paging-items.active{
+  opacity: 1;
+}

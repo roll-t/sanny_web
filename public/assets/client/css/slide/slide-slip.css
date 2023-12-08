@@ -1,0 +1,61 @@
+.slide-slip{
+    position: relative;
+}
+.slide-slip .slide-wrap{
+    display: flex;
+}
+.slide-slip .slide-wrap .slide-slip-items{
+    flex:1 0 100%;
+}
+.slide-slip .controller{
+    position: absolute;
+    width:100%;
+}
+.slide-slip .controller.ctrl-1{
+    top:50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding-inline:2%;
+}
+.slide-slip .controller.ctrl-1 ion-icon {
+    font-size: 30px;
+    cursor: pointer;
+    transition: .5s;
+    opacity: .3;
+}
+.slide-slip .controller.ctrl-1 ion-icon:hover{
+    opacity: 1;
+}
+.slide-slip .controller.ctrl-1 .btn:nth-child(1) ion-icon:hover{
+    transform: translate(-5px);
+}
+.slide-slip .controller.ctrl-1 .btn:nth-child(2) ion-icon:hover{
+    transform: translate(5px);
+}
+.slide-slip .controller.ctrl-1 ion-icon:active{
+    opacity: .3;
+}
+.slide-slip .controller.ctrl-2{
+    top:100%;
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+.slide-slip .controller.ctrl-2 .dots{
+    width: 10px;
+    height: 10px;
+    border-radius: 100rem;
+    background:var(--text-color-2);
+    cursor: pointer;
+    transition: .3s;
+}
+.slide-slip .controller.ctrl-2 .dots:hover{
+    background: #222222;
+}
+.slide-slip .controller.ctrl-2 .dots:active{
+    background:var(--text-color-2);
+}
+.slide-slip .controller.ctrl-2 .dots.active{
+    width:20px;
+}

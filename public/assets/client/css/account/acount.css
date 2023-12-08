@@ -1,0 +1,116 @@
+*{
+    font-family: 'Roboto';
+}
+.headline{
+    border-bottom: 1px solid #eee;
+}
+
+.container{
+    transition: 0s;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    user-select: none;
+}
+ .main-body{
+    width:30%;
+}
+.container .title{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300;
+    color:var(--text-color-2);
+}
+.to-sign-up{
+    font-weight: 300;
+    margin-block:35px;
+    font-size: 14px;
+    color:var(--text-color-2);
+    display: flex;
+    gap:5px;
+}
+.to-sign-up a{
+    opacity: .6;
+    color:rgb(7, 130, 186);
+}
+.group-input{
+    position: relative;
+    margin-block:30px;
+}
+
+.group-input input{
+    width:100%;
+    outline: none;
+    border:none;    
+    border-bottom: 1px solid var(--text-color-2);
+    height:30px;
+    font-size: 15px;
+    padding-left:5px;
+}
+.group-input input:focus ~ .line{
+    width:100%;
+}
+.group-input .erorr{
+    width:100%;
+    left:0;
+    top:110%;
+    position: absolute;
+    font-size: 10px;
+    font-weight: 300;
+    color:red;
+}
+.group-input .line{
+    transform: 1s;
+    position: absolute;
+    width:0%;
+    height:1.5px;
+    bottom:0;
+    z-index: 10;
+    left:0;
+    background:#636e72;
+}
+
+.group-input input[placeholder]{
+    font-weight: 300;
+}
+.remember{
+    margin-block: 20px;
+    display: flex;
+    font-weight: 300;
+    gap:5px;
+}
+.remember.note{
+    align-items: flex-start;
+    gap:10px;
+    font-size: 13px;
+}
+.confirm{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.confirm .forget{
+    opacity: .8;
+    color:rgb(7, 130, 186);
+    }
+.confirm input{
+    padding:5px 40px;
+    color:white;
+    background: var(--color-2);
+    font-weight: 300;
+    font-size: 15px;
+    border:none;
+    cursor: pointer;
+}
+
+.confirm input:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.305);
+    background: #000;
+}
+.form-sign-up .group-input{
+    margin-top:45px;
+}

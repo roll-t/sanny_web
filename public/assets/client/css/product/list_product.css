@@ -1,0 +1,272 @@
+
+/* ################  LIST-PRODUCT CSS ###################### */
+
+.list-product{
+    display:grid ;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 40px;
+}
+.list-product .product-item{
+    padding:1%;
+    padding-bottom:20px;
+}
+.list-product .product-item:hover{
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
+.list-product .product-item .top-product{
+    position:relative;
+    cursor: pointer;
+    height:300px;
+    overflow: hidden;
+}
+.list-product .product-item .top-product:hover .img-zoom{
+    filter: blur(0);
+    transform: scale(1);
+    opacity: 1;
+}
+.list-product .product-item .top-product .img-zoom{
+    position:absolute;
+    top:0;
+    left:0;
+    transform: scale(.9);
+    z-index: 10;
+    filter: blur(10px);
+    opacity: 0;
+
+}
+.list-product .product-item .top-product .sale{
+    position: absolute;
+    top:5%;
+    left:0;
+    z-index: 10;
+    font-size: 13px;
+    padding:5px 10px;
+    background:var(--sale);
+    color:white;
+}
+.list-product .product-item .top-product .like{
+    position: absolute;
+    top:5%;
+    right:7%;
+    z-index: 10;
+}
+.list-product .product-item .top-product .like ion-icon{
+    font-size: 25px;
+    color:var(--text-color-2);
+}
+.list-product .product-item .top-product .like:hover ion-icon{
+    animation: .7s scale-heart infinite;
+}
+@keyframes scale-heart {
+    0%{
+        transform: scale(1);
+    }50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.list-product .product-item .top-product .img{
+    transition: .4s;
+    height:100%;
+    object-fit: cover;
+}
+.list-product .product-item .name-product{
+    text-transform:uppercase;
+    font-weight: 500;
+    display:-webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    color:var(--text-color-3);
+}
+.list-product .product-item .content-product{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.list-product .product-item .des-product{
+    display:flex;
+    justify-content: space-between;
+}
+
+.list-product .product-item .des-product .list-color-product{
+    display: flex;
+    gap:10px;
+}
+.list-product .product-item .list-color-product .color-item{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    border:1px solid rgba(0, 0, 0, 0.091);
+}
+.list-product .product-item .list-color-product .color-item:hover .des_tag{
+    opacity: 1;
+    bottom:calc(100% + 10px);
+}
+.list-product .product-item .action .action-item:hover .des_tag{
+    opacity: 1;
+    bottom:120%;
+}
+.list-product .product-item .like:hover .des_tag{
+    opacity: 1;
+    bottom:120%;
+}
+.list-product .product-item .like .des_tag{
+    width: 100px;
+}
+.list-product .action{
+    position: absolute;
+    height:75%;
+    bottom:0px;
+    right:-5%;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 100;
+}
+.des_tag_2{
+    transition: .4s;
+    background:var(--color-2);
+    position: absolute;
+    z-index: -1;
+    user-select: none;
+    color:white;
+    padding:3px 5px;
+    top:-100%;
+    left:50%;
+    transform:translateX(-50%);
+    font-size: 13px ;
+    opacity: 0;
+}
+.list-product .product-item .top-product:hover .action{
+    right:5%;
+    opacity: 1;
+    visibility: visible;
+}
+.list-product .action .list-action{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:100%;
+}
+.list-product .action .list-action .action-item{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 100rem;
+    box-shadow:  0 0 5px rgba(0, 0, 0, 0.31);
+    display: flex;
+    align-items:center;
+    justify-content: center;    
+}
+.list-product .action .list-action .view-more{
+    background: var(--color-2);
+}
+.list-product .action .list-action .add-cart{
+    background: var(--color-1);
+}
+.list-product .action .list-action .action-item ion-icon{
+    font-size: 20px;
+    color:white;
+}
+.list-product .product-item .like{
+    position: relative;
+}
+.list-product .product-item .list-color-product .color-item:nth-child(2){
+    background:black;
+}
+.list-product .product-item .list-color-product .color-item:nth-child(3){
+    background:rgb(86, 4, 4);
+}
+
+.des_tag::before{
+    content: "";
+    position: absolute;
+    bottom:-4px;
+    z-index: -10;
+    left:50%;
+    transform:translate(-50%) rotate(45deg);
+    width:8px;
+    height: 8px;
+    background: var(--color-2);
+}
+.des_tag{
+    transition: .4s;
+    background:var(--color-2);
+    position: absolute;
+    z-index: -1;
+    user-select: none;
+    color:white;
+    padding:3px 5px;
+    bottom:50%;
+    left:50%;
+    transform:translateX(-50%);
+    font-size: 11px ;
+    opacity: 0;
+}
+
+
+/* ################## XU LY THEM VAO GIO HANG ############################# */
+
+.list-product .product-item .select-add-cart{
+    position: absolute;
+    left:0;
+    width:100%;
+    height:100%;
+    bottom:-100%;
+    z-index: 200;
+    background: white;
+    overflow-y:scroll;
+    transition: .4s;
+
+}
+
+.list-product .product-item .select-add-cart.active{
+    bottom:0;
+}
+.list-product .product-item .select-add-cart .point-close{
+    position: absolute;
+    top:0;
+    right:0;
+    padding:5px;
+    font-size: 25px;
+}
+.list-product .product-item .select-add-cart .action-add-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height:100%;
+    gap:20px;
+    padding-block:30px;
+}
+.list-product .product-item .select-add-cart .action-add-cart .select-color{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    width:50%;
+}
+.list-product .product-item .select-add-cart .action-add-cart .size-product-view{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.list-product .product-item .select-add-cart .action-add-cart .form-quantity{
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.list-product .product-item .select-add-cart .action-add-cart .form-quantity .btn-confirm{
+    padding-inline:20px;
+}
+.list-product .product-item .select-add-cart .action-add-cart .price{
+    font-size: 20px;
+    color: var(--text-color-2);
+}

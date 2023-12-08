@@ -1,0 +1,328 @@
+/* ################ BANNER CSS ####################### */
+.slide-items{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    background: var(--bg-banner);
+    justify-content: space-between;
+    height:600px;
+}
+
+.banner .slide-items .left-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+}
+.banner .slide-items .left-banner .content{
+    padding-left:25%;
+}
+.banner .slide-items .left-banner .des{
+    color:var(--text-color-2);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.banner .slide-items .left-banner .title{
+    font-size: 60px;
+    text-transform:capitalize;
+}
+@media only screen and (max-width: 1050px) {
+    .slide-items .left-banner .content{
+        padding-left:10%;
+    }
+  }
+.banner .slide-items .left-banner .btn{
+    cursor: pointer;
+    padding:10px 60px;
+    background: var(--color-1);
+    border:none;
+    color:white;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing:5px;
+    text-transform: uppercase;
+}
+.banner .slide-items .right-banner  img{
+    width: 100%;
+    transition: 2s;
+}
+.banner .slide-items .right-banner  img:hover{
+    transform: scale(1.1);
+}
+.banner {
+    transition: 0s;
+    user-select: none;
+    position: relative;
+}
+.banner .controller{
+    position: absolute;
+}
+.banner .controller.ctrl-1{
+    overflow: hidden;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
+.banner:hover .controller.ctrl-1 ion-icon{
+    opacity: .5;
+}
+.banner .controller.ctrl-1 ion-icon{
+    cursor: pointer;
+    font-size:60px;
+    color:var(--text-color-2);
+    opacity: 0;
+}
+
+.banner .controller.ctrl-1 .btn-prev:hover{
+    transform: translateX(-10px);
+}
+.banner .controller.ctrl-1 .btn-next:hover{
+    transform: translateX(10px);
+}
+
+.banner .controller.ctrl-2{
+    left:50%;
+    bottom:1%;
+    display: flex;
+    gap:20px;
+    transform: translateX(-50%);
+}
+.banner .controller.ctrl-2 input{
+    cursor: pointer;
+    width:18px;
+    height: 18px;
+}
+
+.slide-items{
+    display:none;
+}
+
+.slide-items:nth-child(1){
+    display: block;
+    display: flex;
+}
+.slide-items:nth-child(1) .img{
+    animation: slideIn .4s linear;
+
+}
+.slide-items:nth-child(1) .left-banner{
+    animation: contentIn .4s linear;
+}
+
+@keyframes contentIn {
+    0%{
+        margin-bottom: -5%;
+        opacity: 0;
+    }100%{
+        margin-bottom: 0;
+        opacity: 1;
+    }
+}
+@keyframes slideIn {
+    0%{
+       filter: blur(20px);
+    }
+    100%{
+        filter: blur(1);
+    }
+}
+/* ############# BODY-1 CSS ################ */
+
+.body-1 {
+    margin-top: 120px;
+    display:grid;
+    grid-template-columns: 4fr 6fr;
+    grid-column-gap:3%;
+}
+.body-1 .left-body {
+    position: relative;
+    overflow: hidden;
+}
+.body-1 .right-body{
+    padding-right:5%;
+}
+.body-1 .left-body .banner{
+    position: absolute;
+    width:100%;
+    height: 100%;
+}
+.body-1 .left-body .banner:hover img{
+    transform: scale(1.1);
+}
+.body-1 .left-body .banner img{
+    height:100%;
+    transition: 2s;
+    object-fit: cover;
+}
+.body-1 .btn-see-more{
+    position: absolute;
+    padding-inline:50px;
+    z-index: 100;
+    bottom:40%;
+    left:35%;
+}
+
+/* ################  LIST-PRODUCT CSS ###################### */
+
+.headline-list-product{
+    display:flex;
+    justify-content: space-between;
+    padding-bottom:10px;
+    border-bottom:1px solid rgba(0, 0, 0, 0.137);
+    margin-bottom: 20px ;
+    align-items: center;
+}
+.headline-list-product .title{
+    font-size: 20px;
+    font-weight: 500;
+    text-transform:uppercase;
+    color:var(--text-color-3);
+}
+.headline-list-product .controller{
+    gap:20px;
+    display: flex;
+}
+.headline-list-product .controller ion-icon:hover{
+    opacity: 1;
+}
+.headline-list-product .controller ion-icon{
+    opacity: .5;
+    font-size: 20px;
+    cursor: pointer;
+}
+.bottom-line{
+    position:relative;
+    margin-top: 20px;
+    padding-block:20px;
+    padding-left:8%;
+}
+.bottom-line .line{
+    position: absolute;
+    width:100%;
+    height:.5px;
+    background: #66666667;
+    left:0;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+.bottom-line a{
+    color:var(--text-color-2);
+    background: white;
+    padding-inline:10px;
+}
+
+
+/* ##################### COLLECTION CSS ############################## */
+.body-2 {
+    margin-block: 100px;
+}
+.body-2 .title{
+    font-size: 30px;
+    text-transform: uppercase;
+    color:var(--text-color-5);
+    text-align: center;
+    padding-bottom:20px;
+}
+.body-2 .list-collection{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    height:500px;
+}
+.body-2 .list-collection .collection-items img{
+    transition: 3s;
+}
+.body-2 .list-collection .collection-items{
+    width:100%;
+    position: absolute;
+    top:100%;
+    left:0;
+}
+.body-2 .list-collection:hover .collection-items img{
+    transform: scale(1.1);
+}
+.body-2 .list-collection .collection-items:nth-child(1){
+    animation:collecttion-img 5s ease-in forwards;
+}
+.body-2 .list-collection .collection-items:nth-child(2){
+    animation:collecttion-img 5s 15s ease-in forwards;
+}
+.body-2 .list-collection .collection-items:nth-child(3){
+    animation:collecttion-img 5s 30s ease-in forwards;
+}
+@keyframes collecttion-img {
+    0%{
+        top:100%;
+        transform: translateY(0%);
+    }
+    30%{
+        top:0;
+    }
+    50%{
+        transform: translateY(-15%);
+    }
+    100%{
+        transform: translateY(-10%);
+        top:0;
+    }
+}
+
+
+/* ################# BODY-3 CSS ######################## */
+
+.body-3 .right-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline:3%;
+}
+.body-3 .right-body .list-product{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.body-3 .right-body .title-new-product{
+    font-weight: 400;
+    font-size: 25px;
+    text-align: center;
+    color:var(--text-color-5);
+    padding-bottom:25px;
+    text-transform: uppercase;
+}
+
+.btn-see-more{
+    position: relative;
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding:10px 80px;
+    display: inline-block;
+    color: var(--text-color-5);
+    border:1px solid var(--text-color-5);
+    margin-top: 50px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .4s;
+}
+.btn-see-more .background{
+    position: absolute;
+   top:50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+    width:0%;
+    height:100%;
+    background: #000;
+    transition: .6s;
+}
+.btn-see-more:hover{
+    color:white;
+    transform: scale(1.05);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.194);
+}
+.btn-see-more:hover .background{
+    width:100%;
+    z-index: -1;
+}
+

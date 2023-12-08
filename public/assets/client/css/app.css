@@ -1,0 +1,73 @@
+
+:root{
+    --text-color-1:rgb(0, 0, 0) ;
+    --text-color-2:#666;
+    --text-color-3:#747d8c;
+    --text-color-4:rgb(106, 106, 106) ;
+    --text-color-5:#bdc3c7;
+    --color-1:#000000;
+    --color-2:#333;
+    --bg-banner:#ecf0f1;
+    --sale:#2ecc71;
+}
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: .25s;
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+span{
+    display: inline-block;
+}
+.to-top{
+    opacity: .5;
+    transition: .5s;
+    cursor: pointer;
+    bottom:10px;
+    background: #eee;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right:-35px;
+}
+.to-top.active{
+    right: 10px;
+}
+.to-top:hover{
+    opacity: 1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.345);
+}
+.to-top a{
+    font-size: 20px;
+    font-weight: 800;
+    color:var(--color-2);
+
+}
